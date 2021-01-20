@@ -23,7 +23,9 @@ else
     git clone --depth=1 git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
-cp -f .zshrc ~/
+p -f .zshrc ~/
+ln -s `pwd`/.zshrc ~/.zshrc
+ln -s `pwd`/.p10k.zsh ~/.p10k.zsh
 
 
 mkdir -p ~/.quickzsh       # external plugins, things, will be instlled in here
