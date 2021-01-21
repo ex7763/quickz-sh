@@ -193,6 +193,8 @@ corona() {
         curl "https://corona-stats.online"
     fi
 }
+
+bindkey -e
     
 # Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
 bindkey '^[[A' history-substring-search-up
@@ -209,7 +211,11 @@ bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-# End configuration added by Zim install
+
+bindkey '^K' vi-kill-eol
+
+bindkey '^F' forward-char
+bindkey '^B' backward-char
 
 EDITOR='vim'
 export EDITOR
